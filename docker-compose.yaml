@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  summarizer_api:
+    # The name will be displayed # in docker ps
+    container_name: summarizer_api
+    # Build the image from Dockerfile
+    ports:
+      - "8085:30000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: loup21991/summarizer:latest
